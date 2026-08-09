@@ -6,6 +6,8 @@ disable-model-invocation: true
 
 This skill takes the current conversation context and codebase understanding and produces a spec. Do NOT interview the user — just synthesize what you already know.
 
+If the user points you at a **wayfinder map** instead of a conversation, load the map first — its body (Destination, Decisions so far) plus the resolution comments of its closed child tickets — and treat that as the source material.
+
 The issue tracker and triage label vocabulary should have been provided to you — run `/setup-matt-pocock-skills` if not.
 
 ## Process

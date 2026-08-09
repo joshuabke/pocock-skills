@@ -130,14 +130,18 @@ The user may run unblocked tickets in parallel, so expect other sessions to be e
 ## Handoff (factory convention)
 
 When the map is complete — no open tickets, nothing left in **Not yet
-specified** — don't stop silently: run `/to-spec` in the same session,
-synthesizing from the map (Destination, Decisions so far, the closed
-tickets). Link the published spec from the map issue, then close the map.
+specified** — do NOT start consuming it yourself: post a completion comment
+on the map issue (one paragraph: destination reached, route = Decisions so
+far), tell the user, and stop. The map IS the persistent context; whatever
+consumes it (`/to-spec`, or `/to-tickets` directly) runs in a **fresh
+session** that loads the map first — never in the charting session's
+leftover context.
 
 ## Worktree & prototypes (factory convention)
 
 Every wayfinder effort runs in its **own git worktree** (the factory spawn
 script creates it — never chart or resolve in a shared checkout). Research
 findings go to `research/<name>` branches as prescribed above; prototypes go
-to `proto/<map>-<slug>` branches, published as **draft PRs** and linked from
-their ticket as the asset.
+to `proto/<map>-<slug>` branches, **pushed to origin** and linked from their
+ticket as the asset (branch or compare URL — no PR; prototypes are throwaway
+discussion material, a PR would be noise).
