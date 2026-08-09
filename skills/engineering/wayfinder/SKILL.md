@@ -147,6 +147,14 @@ and set it on the seed too. Never invent milestone names; list existing ones
 (`gh api repos/{owner}/{repo}/milestones`) and let the user pick or name a
 new one.
 
+## Milestone (factory convention)
+
+The map and every child ticket inherit the **seed issue's milestone**, and it
+carries into whatever consumes the map. If the seed has no milestone, list
+the repo's milestones (`gh api repos/{owner}/{repo}/milestones`) and ask the
+user which one this effort belongs to — then set it on the seed, the map,
+and every ticket.
+
 ## Worktree & prototypes (factory convention)
 
 Every wayfinder effort runs in its **own git worktree** (the factory spawn
