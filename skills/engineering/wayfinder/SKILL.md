@@ -126,3 +126,18 @@ User invokes with a map (URL or number). A ticket is **optional** — without on
 5. Add newly-surfaced tickets (create-then-wire); graduate any fog the answer has made specifiable, clearing each graduated patch from **Not yet specified** so it lives only as its new ticket. If the answer reveals a ticket — this one or another — sits beyond the destination, **rule it out of scope** rather than resolving it on the route. If the decision invalidates other parts of the map, update or delete those tickets.
 
 The user may run unblocked tickets in parallel, so expect other sessions to be editing the tracker concurrently.
+
+## Handoff (factory convention)
+
+When the map is complete — no open tickets, nothing left in **Not yet
+specified** — don't stop silently: run `/to-spec` in the same session,
+synthesizing from the map (Destination, Decisions so far, the closed
+tickets). Link the published spec from the map issue, then close the map.
+
+## Worktree & prototypes (factory convention)
+
+Every wayfinder effort runs in its **own git worktree** (the factory spawn
+script creates it — never chart or resolve in a shared checkout). Research
+findings go to `research/<name>` branches as prescribed above; prototypes go
+to `proto/<map>-<slug>` branches, published as **draft PRs** and linked from
+their ticket as the asset.

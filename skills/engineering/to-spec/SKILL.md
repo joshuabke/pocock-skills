@@ -16,7 +16,9 @@ The issue tracker and triage label vocabulary should have been provided to you â
 
 Check with the user that these seams match their expectations.
 
-3. Write the spec using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage.
+3. Before publishing, ask the user which milestone (minor version) the spec belongs to. Show the existing milestones via `gh api repos/{owner}/{repo}/milestones` first; if the user wants a new one, also ask for its target date and create it. Assign the milestone to the issue.
+
+4. Write the spec using the template below, then publish it to the project issue tracker. Apply the `spec` label â€” NOT `ready-for-agent`; the release for agent work is done by the user by hand.
 
 <spec-template>
 

@@ -13,3 +13,7 @@ Run typechecking regularly, single test files regularly, and the full test suite
 Once done, use /code-review to review the work.
 
 Commit your work to the current branch.
+
+Push the branch to origin.
+
+Open a pull request whose body contains "Closes #<issue-number>".
