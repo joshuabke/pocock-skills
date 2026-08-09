@@ -137,6 +137,16 @@ consumes it (`/to-spec`, or `/to-tickets` directly) runs in a **fresh
 session** that loads the map first — never in the charting session's
 leftover context.
 
+## Milestones (factory convention)
+
+The seed issue's **milestone** is the effort's milestone. Apply it to the
+map issue and to **every** child ticket at creation (`--milestone`), and
+carry it into whatever consumes the map (spec, tickets). If the seed has no
+milestone, ask the user once at charting start — before creating the map —
+and set it on the seed too. Never invent milestone names; list existing ones
+(`gh api repos/{owner}/{repo}/milestones`) and let the user pick or name a
+new one.
+
 ## Worktree & prototypes (factory convention)
 
 Every wayfinder effort runs in its **own git worktree** (the factory spawn

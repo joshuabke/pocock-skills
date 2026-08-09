@@ -18,7 +18,7 @@ The issue tracker and triage label vocabulary should have been provided to you �
 
 Check with the user that these seams match their expectations.
 
-3. Before publishing, ask the user which milestone (minor version) the spec belongs to. Show the existing milestones via `gh api repos/{owner}/{repo}/milestones` first; if the user wants a new one, also ask for its target date and create it. Assign the milestone to the issue.
+3. Determine the milestone (minor version) for the spec. **Inherit, don't ask, when the source already carries one** — a wayfinder map, its seed issue, or a parent issue with a milestone settles it. Only when no source carries a milestone: ask the user, showing the existing milestones via `gh api repos/{owner}/{repo}/milestones` first; if the user wants a new one, also ask for its target date and create it. Assign the milestone to the issue.
 
 4. Write the spec using the template below, then publish it to the project issue tracker. Apply the `spec` label — NOT `ready-for-agent`; the release for agent work is done by the user by hand.
 
